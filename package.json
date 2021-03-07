@@ -1,0 +1,25 @@
+{
+  "name": "employee-tracker",
+  "version": "1.0.0",
+  "description": "\"Tracks Employees, role, and salary\"",
+  "main": "index.js",
+  "dependencies": {
+    "format": "^0.2.2",
+    "inquirer": "^8.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanteems/employee-tracker.git"
+  },
+  "author": "Evan Teems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evanteems/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/evanteems/employee-tracker#readme"
+}
