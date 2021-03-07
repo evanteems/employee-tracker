@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS employee_tracker;
+CREATE DATABASE employee_tracker;
+
 USE employee_tracker;
 
 DROP TABLE IF EXISTS employees;
@@ -25,8 +28,8 @@ CREATE TABLE roles (
 CREATE TABLE employees (
     id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(30),
-    last_name VARCGAR(30),
-    role_id INT,
+    last_name VARCHAR(30),
+    roles_id INT,
     manager_id INT,
     CONSTRAINT fk_roles FOREIGN KEY (roles_id) REFERENCES roles(id) ON DELETE SET NULL,
     CONSTRAINT fk_employees FOREIGN Key (manager_id) REFERENCES employees(id) ON DELETE SET NULL,

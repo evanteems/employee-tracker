@@ -32,7 +32,7 @@ const mActions = () => {
     }]).then(({mActions}) => {
         if(mActions) {
             return promptUser();
-        } connection,end();
+        } connection.end();
     })
     .catch(err => console.log(err));
 }

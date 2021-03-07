@@ -16,7 +16,7 @@ VALUES
 ("Baker", 35000.00, 2),
 ("Produce Clerk", 35000.00, 3);
 
-INSERT INTO employees (first_name, last_name, role_id, manager_id)
+INSERT INTO employees (first_name, last_name, roles_id, manager_id)
 VALUES
 ("Evan", "Teems", 1, NULL),
 ("Devin", "Shimane", 5, 1),
