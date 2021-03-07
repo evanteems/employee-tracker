@@ -4,9 +4,11 @@
   "description": "\"Tracks Employees, role, and salary\"",
   "main": "index.js",
   "dependencies": {
+    "console.table": "^0.10.0",
     "format": "^0.2.2",
     "inquirer": "^8.0.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5"
   },
   "devDependencies": {},
   "scripts": {
