@@ -25,3 +25,21 @@ Instructions for installing as followed:
   9. Once this has been completed you are ready to use the Employee Tracker!
 
 # Usage
+To begin the employee tracker database, you must first go into your db folder. Next create a new terminal for your index.js as well. Next you must log into your mySQL CLI by entering the following command "mysql -u root -p" in the root of your directory. You will be prompted to enter a passcode. Enter your mySQL password (if you have one entered). Next run the command "source schema.sql" followed by "seeds.sql" to populate the employee_tracker database. Now that you have populated the database you don't need to use mySQL anymore, so type in the terminal "quit;" or "exit;". next go over to the terminal that was positioned for the index,js file. You will then type in that terminal "node index.js". You will be prompted with options to interact with: "View All Departments", "View All Roles", "View All Employees", "Add a Department", "Add a Role", "Add an Employee", "Update an Employee", "Update Employee Role", and "Exit Program". When the user selects a veiwing option they are presented with an ordered table with info to the request. If the user selects an option to edut the table by entering a new employee, role, department, or update an employee's role then they are asked for input regarding their addition. By selecting "Exit Program" it will terminate the connection to the database and return the user to the CLI. After an action is completed the user is asked if they would like to take more actions. If they choose "Yes" then they will be again prompted with all options for interactions. If the user selects no then the connection to the database is terminated and the user returns to the CLI.
+
+To see this application in action please watch the demo
+
+# License
+MIT license Copyright
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software with restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS:, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISINF FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+
+# Contribution
+If you see something you would like to alter or add to the repository, see instructions above for cloning the repo and installation. Additonal features that I thought about adding would be a delete function.
+
+# Questions
+If you have any questions regarding the repo, please contact the author via GitHub at: https://github.com/evanteems
