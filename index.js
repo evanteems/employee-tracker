@@ -187,7 +187,7 @@ function addRole() {
 
 function addEmployee() {
     connection.query(
-        `SELECT * FROM employees WHERE role_id = 1`,
+        `SELECT * FROM employees WHERE roles_id = 1`,
         function (err, results) {
             if(err) throw err;
             let managerList = results.map(manager => ({
@@ -234,7 +234,7 @@ function addEmployee() {
                                 {
                                     first_name: answers.empFistName,
                                     last_name: answers.empLastName,
-                                    role_id: answers.empRole,
+                                    roles_id: answers.empRole,
                                     manager_id: answers.empManager
                                 },
                                 function (err, results) {
@@ -250,9 +250,9 @@ function addEmployee() {
     );
 };
 
-const updateEmp = () => {
+const updateERoles = () => {
     connection.query(
-        'SELECT CONCAT(employees.first_name, " ",employees.last_name) AS full_name, employees.id as empl_id, roles.* FROM employees RIGHT JOIN roles on employees.role_id = roles.id',
+        'SELECT CONCAT(employees.first_name, " ",employees.last_name) AS full_name, employees.id as empl_id, roles.* FROM employees RIGHT JOIN roles on employees.roles_id = roles.id',
         function (err, res) {
             if (err) throw err;
             let employeeList = res.map(employee => ({
@@ -283,7 +283,7 @@ const updateEmp = () => {
                 .then((answer) => {
                     let editID = answer.employee[1];
                     let newRoleID = answer.newRole[1];
-                    connection.query(`UPDATE employees SET role_id=${newRoleID} WHERE id=${editID};`,
+                    connection.query(`UPDATE employees SET roles_id=${newRoleID} WHERE id=${editID};`,
                         function (err, res) {
                             if (err) {
                                 throw err
@@ -297,5 +297,11 @@ const updateEmp = () => {
         }
     )
 };
+
+connection.connect(err => {
+    if (err) throw err;
+    console.log('Connected as id' + connection.threadId + '\n');
+    promptUser();
+});
 
 promptUser();
